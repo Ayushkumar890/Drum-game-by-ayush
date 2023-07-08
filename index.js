@@ -1,9 +1,6 @@
 // count the number of drum by using length property
-
 var numberofdrum = document.querySelectorAll(".drum").length
-
 // create function of key press and sound
-
 function keysound(key){
   switch (key) {
     case "w":
@@ -41,18 +38,12 @@ function keysound(key){
       break;
   }
 }
-
 // location of which key is press 
 // we write the keypress instead of keydown
 document.addEventListener("keypress",function(event){
   keysound(event.key);
   buttonAnimation(event.key);
-
 })
-
-
-
-
 for(var i = 0;i<numberofdrum;i++){
   document.querySelectorAll('.drum')[i].addEventListener("keypress",function(){
   
@@ -61,10 +52,8 @@ for(var i = 0;i<numberofdrum;i++){
     buttonAnimation(buttonInnerHTML);
   });
 }
-
 function buttonAnimation(currentkey){
   var activekey = document.querySelector("."+currentkey);
-
   activekey.classList.add("pressed");
   setTimeout(function(){
     activekey.classList.remove("pressed");
