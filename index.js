@@ -5,8 +5,6 @@ var numberofdrum = document.querySelectorAll(".drum").length
 // create function of key press and sound
 
 function keysound(key){
-
-  
   switch (key) {
     case "w":
       var tom1 = new Audio('sounds/tom-1.mp3');
